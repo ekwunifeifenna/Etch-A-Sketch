@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+
+/* Custom font to be used in the game */
+/* font from https://www.dafont.com/game-over.font */
+@font-face {
+    font-family: gameover;
+    src: url('game_over.woff') format('woff'),
+         url('game_over.ttf') format('ttf');
+  }
+
+
+
+  /* For all the divs */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
