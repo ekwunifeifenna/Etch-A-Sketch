@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
+
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +10,87 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="disco-ball.png">
 </head>
+
+
 <body>
-    
+    <div class="bodyContainer">
+
+        <!-- THE HEADER -->
+        <div class="header">
+            <p>THE-IFENNA-SKETCH</p>
+        </div>
+
+
+<!-- THE MAIN CLASS -->
+
+        <div class="driverClass">
+            
+            <!-- This class handles all of the controls -->
+            <div class="controls">
+
+
+                    <!-- The class for the box showing the pen colour  -->
+                <div class="color-card">
+                    <div class="color-box">
+                        <input type="color" id="color-select">
+                    </div>
+                    <span>Pen Colour</span>
+                </div>
+
+
+
+                <!-- The class that handles the box that shows the backgound color of the game. Set the initial color to white-->
+                <div class="color-card cc2">
+                    <div class="color-box">
+                        <input type="color" id="backgound-color-select" value="#ffffff">
+                    </div>
+                    <span>Background Colour</span>
+                </div>
+
+
+
+                <!-- Certian functionalities that are assigned to buttons -->
+                <button id="color-fill">Colour Fill</button>
+                <button id="color-getter">Colour Getter</button>
+                
+                <button id="eraser-btn">Eraser</button>
+                <button id="rainbow-btn">Rainbow</button>
+                <button id="shader-btn"> Shading</button>
+                <button id="lighten-btn">Lighten</button>
+                
+                
+                
+                <!-- The slider -->
+                <div class="slider-box">
+                    <input type="range" value="24" min="1" max="100" id="range-slider"
+                    onmousemove="rangeSliderValue(this.value)" onChange="rangeSlider(this.value)">
+                    <div id="progress-bar"></div>
+                </div>
+
+
+
+                
+                <!-- The Grid size section -->
+                <p class="grid-size">Grid size: <span id="range-value">24</span> x <span id="range-value">24</span></p>
+
+
+                <!-- The last two buttons on the main page -->
+                <button id="grid-btn" class="btn-on">Grid Lines</button>
+                <button id="clear-grid">Clear Grid</button>
+
+            </div>
+
+
+
+            <!-- The grid wrapper class -->
+            <div class="grid-wrapper">
+                <div class="grid-container toggle-grid" draggable="false"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link to my javascript file -->
+    <script src="index.js"></script>
 
 </body>
 </html>
